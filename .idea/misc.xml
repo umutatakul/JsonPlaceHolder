@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_album.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_comments.xml" value="0.22" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_photos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_photos_detail.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_posts.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_selection_screen.xml" value="0.33" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/activity_todos.xml" value="0.33" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/recycler_row.xml" value="0.25" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/recycler_row_albums.xml" value="0.22" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/recycler_row_comments.xml" value="0.25" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/recycler_row_photos.xml" value="0.2" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/recycler_row_posts.xml" value="0.1" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/recycler_row_todos.xml" value="0.1" />
+        <entry key="..\:/Users/pc/Desktop/Nuevo/JsonPlaceHolder/app/src/main/res/layout/recycler_row_users.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.18" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
