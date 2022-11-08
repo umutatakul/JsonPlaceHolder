@@ -12,28 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JsonPlaceHolder">
         <activity
-            android:name=".CommentsActivity"
+            android:name=".Activities.CommentsActivity"
             android:exported="false" />
         <activity
-            android:name=".PostsActivity"
+            android:name=".Activities.PostsActivity"
             android:exported="false" />
         <activity
-            android:name=".PhotosDetailActivity"
+            android:name=".Activities.PhotosDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".PhotosActivity"
+            android:name=".Activities.PhotosActivity"
             android:exported="false" />
         <activity
-            android:name=".AlbumActivity"
+            android:name=".Activities.AlbumActivity"
             android:exported="false" />
         <activity
-            android:name=".SelectionScreenActivity"
+            android:name=".Activities.SelectionScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".TodosActivity"
+            android:name=".Activities.TodosActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
