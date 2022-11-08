@@ -1,11 +1,11 @@
-package com.umutatakul.jsonplaceholder.Activities
+package com.umutatakul.jsonplaceholder.Fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.umutatakul.jsonplaceholder.API.ApiInterface
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.umutatakul.jsonplaceholder.ModelItems.CommentsModelItem
-import com.umutatakul.jsonplaceholder.Constants.Constants
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterComments
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
@@ -13,27 +13,30 @@ import kotlinx.android.synthetic.main.activity_comments.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-class CommentsActivity : AppCompatActivity() {
 
-    //lateinit var recyclerAdapterComments: RecyclerAdapterComments
-    //lateinit var linearLayoutManager: LinearLayoutManager
-
+class CommentsFragment : Fragment() {
+    lateinit var recyclerAdapterComments: RecyclerAdapterComments
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_comments)
 
-        //recyclerViewComments.setHasFixedSize(true)
-        //linearLayoutManager = LinearLayoutManager(this)
-        //recyclerViewComments.layoutManager = linearLayoutManager
-
-        //getCommentsData ()
     }
 
-    /*fun getCommentsData(){
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_comments, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recyclerViewComments.setHasFixedSize(true)
+        getCommentsData ()
+    }
+    fun getCommentsData(){
         val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 
         val retrofitData = retrofitBuilder.getCommentsDataFromWS(SingletonClass.gonderilenPostsId.toString())
@@ -45,14 +48,9 @@ class CommentsActivity : AppCompatActivity() {
             ) {
                 val responseBody = response.body()
 
-                recyclerAdapterComments = RecyclerAdapterComments(baseContext,responseBody!!)
+                recyclerAdapterComments = RecyclerAdapterComments(context!!,responseBody!!)
                 recyclerAdapterComments.notifyDataSetChanged()
                 recyclerViewComments.adapter = recyclerAdapterComments
-
-
-
-
-
 
             }
 
@@ -62,5 +60,5 @@ class CommentsActivity : AppCompatActivity() {
         })
     }
 
-     */
+
 }

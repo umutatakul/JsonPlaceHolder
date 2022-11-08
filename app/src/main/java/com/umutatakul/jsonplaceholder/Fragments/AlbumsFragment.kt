@@ -1,11 +1,11 @@
-package com.umutatakul.jsonplaceholder.Activities
+package com.umutatakul.jsonplaceholder.Fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.umutatakul.jsonplaceholder.ModelItems.AlbumsModelItem
-import com.umutatakul.jsonplaceholder.API.ApiInterface
-import com.umutatakul.jsonplaceholder.Constants.Constants
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterAlbums
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
@@ -13,30 +13,31 @@ import kotlinx.android.synthetic.main.activity_album.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-class AlbumActivity : AppCompatActivity()  {
 
-    //lateinit var  recyclerAdapterAlbums: RecyclerAdapterAlbums
-    //lateinit var linearLayoutManager: LinearLayoutManager
+class AlbumsFragment : Fragment() {
+    lateinit var  recyclerAdapterAlbums: RecyclerAdapterAlbums
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_album)
-
-        //recyclerView_albums.setHasFixedSize(true)
-        //linearLayoutManager = LinearLayoutManager(this)
-        //recyclerView_albums.layoutManager = linearLayoutManager
-
-        //getDataAlbums()
-        
-        
-        
 
     }
 
-    /*fun getDataAlbums() {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_albums, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recyclerView_albums.setHasFixedSize(true)
+        getDataAlbums()
+    }
+    fun getDataAlbums() {
         var selectedUserId = SingletonClass.gonderilenUsersId.toString()
         var albumsUserId = selectedUserId
 
@@ -55,7 +56,7 @@ class AlbumActivity : AppCompatActivity()  {
             ) {
                 val responseBody = response.body()!!
 
-                recyclerAdapterAlbums = RecyclerAdapterAlbums(baseContext,responseBody)
+                recyclerAdapterAlbums = RecyclerAdapterAlbums(context!!,responseBody)
                 recyclerAdapterAlbums.notifyDataSetChanged()
                 recyclerView_albums.adapter = recyclerAdapterAlbums
             }
@@ -65,7 +66,7 @@ class AlbumActivity : AppCompatActivity()  {
 
 
         })
-    }*/
+    }
+
 
 }
-

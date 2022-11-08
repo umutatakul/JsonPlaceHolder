@@ -25,16 +25,18 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var  recyclerAdapterUsers: RecyclerAdapterUsers
-    lateinit var linearLayoutManager: LinearLayoutManager
+    //lateinit var  recyclerAdapterUsers: RecyclerAdapterUsers
+    //lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         //https://stackoverflow.com/questions/28709220/understanding-recyclerview-sethasfixedsize
 
-        recyclerViewUsers.setHasFixedSize(true)
+        //recyclerViewUsers.setHasFixedSize(true)
 
         //Bunları direkt layout dosyası içinde tanımladık
         /*
@@ -47,11 +49,11 @@ class MainActivity : AppCompatActivity() {
         //linearLayoutManager = LinearLayoutManager(this)
         //recyclerViewUsers.layoutManager= linearLayoutManager
 
-        getUsersData()
+        //getUsersData()
 
 
     }
-    fun getUsersData(){
+    /*fun getUsersData(){
         val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
         val retrofitData = retrofitBuilder.getUserDataFromWS()
 
@@ -79,5 +81,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-    }
+    }*/
+
+
 }

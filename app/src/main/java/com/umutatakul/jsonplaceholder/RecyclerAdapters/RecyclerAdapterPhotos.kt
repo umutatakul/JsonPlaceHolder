@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.umutatakul.jsonplaceholder.Activities.PhotosDetailActivity
+import com.umutatakul.jsonplaceholder.Fragments.PhotosFragmentDirections
 import com.umutatakul.jsonplaceholder.ModelItems.PhotosModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
@@ -41,13 +43,14 @@ class RecyclerAdapterPhotos(var context:Context, val photoList:List<PhotosModelI
 
 
         holder.itemView.photosThumbnailImage.setOnClickListener {
-            val intent = Intent (holder.itemView.context, PhotosDetailActivity::class.java)
-
+            //val intent = Intent (holder.itemView.context, PhotosDetailActivity::class.java)
+            val action = PhotosFragmentDirections.actionPhotosFragmentToPhotosDetailFragment()
+            Navigation.findNavController(it).navigate(action)
             val singletonId = SingletonClass.SecilenIdBilgiler
 
             singletonId.gonderilenPhotoUrl = photoList.get(position).url
 
-            holder.itemView.context.startActivity(intent)
+            //holder.itemView.context.startActivity(intent)
         }
     }
 

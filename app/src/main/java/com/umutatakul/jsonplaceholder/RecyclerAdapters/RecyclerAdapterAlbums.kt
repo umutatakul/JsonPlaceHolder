@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.umutatakul.jsonplaceholder.Activities.PhotosActivity
+import com.umutatakul.jsonplaceholder.Fragments.AlbumsFragmentDirections
 import com.umutatakul.jsonplaceholder.ModelItems.AlbumsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
@@ -37,13 +39,14 @@ class RecyclerAdapterAlbums(val context:Context ,val albumList:List<AlbumsModelI
 
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, PhotosActivity::class.java)
-
+            //val intent = Intent(holder.itemView.context, PhotosActivity::class.java)
+            val action = AlbumsFragmentDirections.actionAlbumsFragmentToPhotosFragment()
+            Navigation.findNavController(it).navigate(action)
             var singletonId = SingletonClass.SecilenIdBilgiler
 
             singletonId.gonderilenAlbumId =albumList[position].id
 
-            holder.itemView.context.startActivity(intent)
+            //holder.itemView.context.startActivity(intent)
 
 
         }

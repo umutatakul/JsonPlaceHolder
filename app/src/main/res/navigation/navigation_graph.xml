@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/usersFragment">
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_selectionScreenFragment"
+            app:destination="@id/selectionScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todosFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.TodosFragment"
+        android:label="fragment_todos"
+        tools:layout="@layout/fragment_todos" />
+    <fragment
+        android:id="@+id/selectionScreenFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.SelectionScreenFragment"
+        android:label="fragment_selection_screen"
+        tools:layout="@layout/fragment_selection_screen" >
+        <action
+            android:id="@+id/action_selectionScreenFragment_to_todosFragment"
+            app:destination="@id/todosFragment" />
+        <action
+            android:id="@+id/action_selectionScreenFragment_to_postsFragment"
+            app:destination="@id/postsFragment" />
+        <action
+            android:id="@+id/action_selectionScreenFragment_to_albumsFragment"
+            app:destination="@id/albumsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.PostsFragment"
+        android:label="fragment_posts"
+        tools:layout="@layout/fragment_posts" >
+        <action
+            android:id="@+id/action_postsFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.CommentsFragment"
+        android:label="fragment_comments"
+        tools:layout="@layout/fragment_comments" />
+    <fragment
+        android:id="@+id/albumsFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.AlbumsFragment"
+        android:label="fragment_albums"
+        tools:layout="@layout/fragment_albums" >
+        <action
+            android:id="@+id/action_albumsFragment_to_photosFragment"
+            app:destination="@id/photosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photosFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.PhotosFragment"
+        android:label="fragment_photos"
+        tools:layout="@layout/fragment_photos" >
+        <action
+            android:id="@+id/action_photosFragment_to_photosDetailFragment"
+            app:destination="@id/photosDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photosDetailFragment"
+        android:name="com.umutatakul.jsonplaceholder.Fragments.PhotosDetailFragment"
+        android:label="fragment_photos_detail"
+        tools:layout="@layout/fragment_photos_detail" />
+</navigation>

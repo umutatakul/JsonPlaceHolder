@@ -1,10 +1,10 @@
-package com.umutatakul.jsonplaceholder.Activities
+package com.umutatakul.jsonplaceholder.Fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.umutatakul.jsonplaceholder.API.ApiInterface
-import com.umutatakul.jsonplaceholder.Constants.Constants
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.umutatakul.jsonplaceholder.ModelItems.PhotosModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterPhotos
@@ -13,27 +13,33 @@ import kotlinx.android.synthetic.main.activity_photos.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-class PhotosActivity : AppCompatActivity() {
 
-    //lateinit var recyclerAdapterPhotos: RecyclerAdapterPhotos
-    //lateinit var linearLayoutManager: LinearLayoutManager
+class PhotosFragment : Fragment() {
+    lateinit var recyclerAdapterPhotos: RecyclerAdapterPhotos
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_photos)
 
-        //recyclerViewPhotos.setHasFixedSize(true)
-        //linearLayoutManager = LinearLayoutManager(this)
 
-        //recyclerViewPhotos.layoutManager = linearLayoutManager
 
-        //getPhotosData()
     }
 
-    /*fun getPhotosData(){
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_photos, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recyclerViewPhotos.setHasFixedSize(true)
+        getPhotosData()
+    }
+    fun getPhotosData(){
         val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 
         val retrofitData = retrofitBuilder.getPhotosDataFromWS(SingletonClass.gonderilenAlbumId.toString())
@@ -46,7 +52,7 @@ class PhotosActivity : AppCompatActivity() {
             ) {
                 val responseBody = response.body()!!
 
-                recyclerAdapterPhotos = RecyclerAdapterPhotos(baseContext,responseBody)
+                recyclerAdapterPhotos = RecyclerAdapterPhotos(context!!,responseBody)
                 recyclerAdapterPhotos.notifyDataSetChanged()
                 recyclerViewPhotos.adapter = recyclerAdapterPhotos
 
@@ -59,5 +65,5 @@ class PhotosActivity : AppCompatActivity() {
         })
     }
 
-     */
+
 }

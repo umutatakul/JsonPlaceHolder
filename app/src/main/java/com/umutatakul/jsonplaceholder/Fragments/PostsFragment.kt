@@ -1,10 +1,10 @@
-package com.umutatakul.jsonplaceholder.Activities
+package com.umutatakul.jsonplaceholder.Fragments
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.umutatakul.jsonplaceholder.API.ApiInterface
-import com.umutatakul.jsonplaceholder.Constants.Constants
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.umutatakul.jsonplaceholder.ModelItems.PostsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterPosts
@@ -13,25 +13,32 @@ import kotlinx.android.synthetic.main.activity_posts.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
-class PostsActivity : AppCompatActivity() {
 
-    //lateinit var recyclerAdapterPosts: RecyclerAdapterPosts
-    //lateinit var linearLayoutManager: LinearLayoutManager
+class PostsFragment : Fragment() {
+    lateinit var recyclerAdapterPosts: RecyclerAdapterPosts
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_posts)
 
-        //recyclerViewPosts.setHasFixedSize(true)
-        //linearLayoutManager = LinearLayoutManager(this)
-        //recyclerViewPosts.layoutManager = linearLayoutManager
-
-        //getPostsData ()
     }
-    /*fun getPostsData(){
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_posts, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        recyclerViewPosts.setHasFixedSize(true)
+        getPostsData ()
+    }
+
+    fun getPostsData(){
         val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 
         val retrofitData = retrofitBuilder.getPostDataFromWS(SingletonClass.gonderilenUsersId.toString())
@@ -43,7 +50,7 @@ class PostsActivity : AppCompatActivity() {
             ) {
                 val responseBody = response.body()!!
 
-                recyclerAdapterPosts = RecyclerAdapterPosts(baseContext,responseBody)
+                recyclerAdapterPosts = RecyclerAdapterPosts(context!!,responseBody)
                 recyclerAdapterPosts.notifyDataSetChanged()
                 recyclerViewPosts.adapter = recyclerAdapterPosts
             }
@@ -57,5 +64,5 @@ class PostsActivity : AppCompatActivity() {
 
     }
 
-     */
+
 }

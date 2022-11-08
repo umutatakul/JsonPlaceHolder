@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.umutatakul.jsonplaceholder.Activities.SelectionScreenActivity
+import com.umutatakul.jsonplaceholder.Fragments.UsersFragmentDirections
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
 import com.umutatakul.jsonplaceholder.ModelItems.UsersModelItem
@@ -37,9 +39,12 @@ class RecyclerAdapterUsers (val context : Context, val usersList:List<UsersModel
         holder.emailVH.text=usersList[position].email
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, SelectionScreenActivity::class.java)
+            //val intent = Intent(holder.itemView.context, SelectionScreenActivity::class.java)
+
+            val action = UsersFragmentDirections.actionUsersFragmentToSelectionScreenFragment()
+            Navigation.findNavController(it).navigate(action)
             //var gonderlienId = holder.idVH
-            intent.putExtra("userId",usersList[position].id.toString())
+            //intent.putExtra("userId",usersList[position].id.toString())
 
             var singletonId = SingletonClass.SecilenIdBilgiler
             //singletonId.gonderilenId = holder.idVH.text.toString().toInt()
@@ -49,7 +54,7 @@ class RecyclerAdapterUsers (val context : Context, val usersList:List<UsersModel
             singletonId.gonderilenUsersId = usersList[position].id
             singletonId.gonderilenUserName= usersList[position].name
 
-            holder.itemView.context.startActivity(intent)
+            //holder.itemView.context.startActivity(intent)
 
 
 

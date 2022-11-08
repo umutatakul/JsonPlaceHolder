@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.umutatakul.jsonplaceholder.Activities.CommentsActivity
+import com.umutatakul.jsonplaceholder.Fragments.PostsFragment
+import com.umutatakul.jsonplaceholder.Fragments.PostsFragmentDirections
 import com.umutatakul.jsonplaceholder.ModelItems.PostsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
@@ -38,13 +41,14 @@ class RecyclerAdapterPosts (val context : Context, val postsList:List<PostsModel
         holder.postBodyVH.text = postsList[position].body
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, CommentsActivity::class.java)
-
+            //val intent = Intent(holder.itemView.context, CommentsActivity::class.java)
+            val action = PostsFragmentDirections.actionPostsFragmentToCommentsFragment()
+            Navigation.findNavController(it).navigate(action)
             var singletonId = SingletonClass.SecilenIdBilgiler
 
             singletonId.gonderilenPostsId = postsList[position].id.toString()
 
-            holder.itemView.context.startActivity(intent)
+            //holder.itemView.context.startActivity(intent)
         }
     }
 
