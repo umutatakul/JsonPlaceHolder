@@ -48,7 +48,7 @@ class CommentsFragment : Fragment() {
             ) {
                 val responseBody = response.body()
 
-                recyclerAdapterComments = RecyclerAdapterComments(context!!,responseBody!!)
+                recyclerAdapterComments = RecyclerAdapterComments(requireContext(),responseBody!!)
                 recyclerAdapterComments.notifyDataSetChanged()
                 recyclerViewComments.adapter = recyclerAdapterComments
 

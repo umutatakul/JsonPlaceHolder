@@ -50,7 +50,7 @@ class PostsFragment : Fragment() {
             ) {
                 val responseBody = response.body()!!
 
-                recyclerAdapterPosts = RecyclerAdapterPosts(context!!,responseBody)
+                recyclerAdapterPosts = RecyclerAdapterPosts(requireContext(),responseBody)
                 recyclerAdapterPosts.notifyDataSetChanged()
                 recyclerViewPosts.adapter = recyclerAdapterPosts
             }

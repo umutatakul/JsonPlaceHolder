@@ -52,7 +52,7 @@ class PhotosFragment : Fragment() {
             ) {
                 val responseBody = response.body()!!
 
-                recyclerAdapterPhotos = RecyclerAdapterPhotos(context!!,responseBody)
+                recyclerAdapterPhotos = RecyclerAdapterPhotos(requireContext(),responseBody)
                 recyclerAdapterPhotos.notifyDataSetChanged()
                 recyclerViewPhotos.adapter = recyclerAdapterPhotos
 

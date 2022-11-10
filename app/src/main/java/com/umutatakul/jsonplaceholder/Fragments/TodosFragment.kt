@@ -49,7 +49,7 @@ class TodosFragment : Fragment() {
                                     response: Response<List<TodosModelItem>?>
             ) {
                 val responseBody = response.body()!!
-                recyclerAdapterTodos = RecyclerAdapterTodos(context!!,responseBody)
+                recyclerAdapterTodos = RecyclerAdapterTodos(requireContext(),responseBody)
                 recyclerAdapterTodos.notifyDataSetChanged()
                 recyclerView_todos.adapter = recyclerAdapterTodos
 

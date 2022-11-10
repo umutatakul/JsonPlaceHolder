@@ -51,7 +51,7 @@ class UsersFragment : Fragment() {
             ) {
                 val responseBody=response.body()!!
 
-                recyclerAdapterUsers = RecyclerAdapterUsers(context!! ,responseBody)
+                recyclerAdapterUsers = RecyclerAdapterUsers(requireContext() ,responseBody)
 
                 //NotifyDataSetChanged()'i Adaptöre verinin değiştiğini bildirmek için kullanıyoruz
 

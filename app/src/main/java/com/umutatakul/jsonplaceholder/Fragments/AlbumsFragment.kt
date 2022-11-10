@@ -54,9 +54,11 @@ class AlbumsFragment : Fragment() {
                 call: Call<List<AlbumsModelItem>?>,
                 response: Response<List<AlbumsModelItem>?>
             ) {
+
                 val responseBody = response.body()!!
 
-                recyclerAdapterAlbums = RecyclerAdapterAlbums(context!!,responseBody)
+
+                recyclerAdapterAlbums = RecyclerAdapterAlbums(requireContext(),responseBody)
                 recyclerAdapterAlbums.notifyDataSetChanged()
                 recyclerView_albums.adapter = recyclerAdapterAlbums
             }
