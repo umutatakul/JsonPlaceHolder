@@ -49,9 +49,13 @@ class UsersFragment : Fragment() {
                 call: Call<List<UsersModelItem>?>,
                 response: Response<List<UsersModelItem>?>
             ) {
-                val responseBody=response.body()!!
+                val responseBody=response.body()
 
-                recyclerAdapterUsers = RecyclerAdapterUsers(requireContext() ,responseBody)
+                responseBody?.let {
+                    recyclerAdapterUsers = RecyclerAdapterUsers(requireContext() ,responseBody)
+                }
+
+
 
                 //NotifyDataSetChanged()'i Adaptöre verinin değiştiğini bildirmek için kullanıyoruz
 

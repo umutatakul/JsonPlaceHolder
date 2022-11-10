@@ -48,8 +48,11 @@ class TodosFragment : Fragment() {
             override fun onResponse(call: Call<List<TodosModelItem>?>,
                                     response: Response<List<TodosModelItem>?>
             ) {
-                val responseBody = response.body()!!
-                recyclerAdapterTodos = RecyclerAdapterTodos(requireContext(),responseBody)
+                val responseBody = response.body()
+                responseBody?.let {
+                    recyclerAdapterTodos = RecyclerAdapterTodos(requireContext(),responseBody)
+                }
+
                 recyclerAdapterTodos.notifyDataSetChanged()
                 recyclerView_todos.adapter = recyclerAdapterTodos
 

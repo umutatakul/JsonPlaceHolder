@@ -32,13 +32,13 @@ class TodosActivity : AppCompatActivity() {
         //recyclerView_todos.layoutManager = linearlayoutManager
 
 
-        val intent = intent
-        val gelenUserId = intent.getStringExtra("userId")
+        //val intent = intent
+        //val gelenUserId = intent.getStringExtra("userId")
         //todosIdText.text=gelenUserId
         //getTodosData()
         //return gelenUserId
 
-        val selectedTodosId = SingletonClass.SecilenIdBilgiler
+        //val selectedTodosId = SingletonClass.SecilenIdBilgiler
         //todosIdText.text = selectedTodosId.gonderilenUsersId.toString()
     }
     /*fun getTodosData(){

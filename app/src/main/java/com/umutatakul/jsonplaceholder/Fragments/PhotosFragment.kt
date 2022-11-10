@@ -50,9 +50,13 @@ class PhotosFragment : Fragment() {
                 call: Call<List<PhotosModelItem>?>,
                 response: Response<List<PhotosModelItem>?>
             ) {
-                val responseBody = response.body()!!
+                val responseBody = response.body()
 
-                recyclerAdapterPhotos = RecyclerAdapterPhotos(requireContext(),responseBody)
+                responseBody?.let {
+                    recyclerAdapterPhotos = RecyclerAdapterPhotos(requireContext(),responseBody)
+                }
+
+
                 recyclerAdapterPhotos.notifyDataSetChanged()
                 recyclerViewPhotos.adapter = recyclerAdapterPhotos
 

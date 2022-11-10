@@ -48,9 +48,13 @@ class PostsFragment : Fragment() {
                 call: Call<List<PostsModelItem>?>,
                 response: Response<List<PostsModelItem>?>
             ) {
-                val responseBody = response.body()!!
+                val responseBody = response.body()
 
-                recyclerAdapterPosts = RecyclerAdapterPosts(requireContext(),responseBody)
+                responseBody?.let {
+                    recyclerAdapterPosts = RecyclerAdapterPosts(requireContext(),responseBody)
+                }
+
+
                 recyclerAdapterPosts.notifyDataSetChanged()
                 recyclerViewPosts.adapter = recyclerAdapterPosts
             }
