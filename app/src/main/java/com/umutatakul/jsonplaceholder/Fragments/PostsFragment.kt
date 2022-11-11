@@ -9,7 +9,7 @@ import com.umutatakul.jsonplaceholder.ModelItems.PostsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterPosts
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
-import kotlinx.android.synthetic.main.activity_posts.*
+import kotlinx.android.synthetic.main.fragment_posts.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

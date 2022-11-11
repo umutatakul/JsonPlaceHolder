@@ -9,7 +9,8 @@ import com.umutatakul.jsonplaceholder.ModelItems.AlbumsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterAlbums
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
-import kotlinx.android.synthetic.main.activity_album.*
+
+import kotlinx.android.synthetic.main.fragment_albums.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

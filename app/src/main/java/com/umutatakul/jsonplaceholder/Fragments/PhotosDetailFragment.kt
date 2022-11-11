@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
-import kotlinx.android.synthetic.main.activity_photos_detail.*
+import kotlinx.android.synthetic.main.fragment_photos_detail.*
 
 
 class PhotosDetailFragment : Fragment() {

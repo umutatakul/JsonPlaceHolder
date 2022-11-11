@@ -9,7 +9,7 @@ import com.umutatakul.jsonplaceholder.ModelItems.CommentsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterComments
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
-import kotlinx.android.synthetic.main.activity_comments.*
+import kotlinx.android.synthetic.main.fragment_comments.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

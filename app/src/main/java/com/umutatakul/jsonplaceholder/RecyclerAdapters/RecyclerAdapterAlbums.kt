@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.umutatakul.jsonplaceholder.Activities.PhotosActivity
+
 import com.umutatakul.jsonplaceholder.Fragments.AlbumsFragmentDirections
 import com.umutatakul.jsonplaceholder.ModelItems.AlbumsModelItem
 import com.umutatakul.jsonplaceholder.R

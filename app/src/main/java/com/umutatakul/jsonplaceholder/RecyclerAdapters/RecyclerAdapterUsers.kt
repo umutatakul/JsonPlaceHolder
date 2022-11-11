@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.umutatakul.jsonplaceholder.Activities.SelectionScreenActivity
+
 import com.umutatakul.jsonplaceholder.Fragments.UsersFragmentDirections
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass

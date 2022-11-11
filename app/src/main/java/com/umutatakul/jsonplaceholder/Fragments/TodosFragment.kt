@@ -9,7 +9,7 @@ import com.umutatakul.jsonplaceholder.ModelItems.TodosModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterTodos
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
-import kotlinx.android.synthetic.main.activity_todos.*
+import kotlinx.android.synthetic.main.fragment_todos.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

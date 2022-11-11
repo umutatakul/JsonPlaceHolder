@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.umutatakul.jsonplaceholder.Activities.CommentsActivity
+
 import com.umutatakul.jsonplaceholder.Fragments.PostsFragment
 import com.umutatakul.jsonplaceholder.Fragments.PostsFragmentDirections
 import com.umutatakul.jsonplaceholder.ModelItems.PostsModelItem

@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import com.umutatakul.jsonplaceholder.Activities.PhotosDetailActivity
+
 import com.umutatakul.jsonplaceholder.Fragments.PhotosFragmentDirections
 import com.umutatakul.jsonplaceholder.ModelItems.PhotosModelItem
 import com.umutatakul.jsonplaceholder.R

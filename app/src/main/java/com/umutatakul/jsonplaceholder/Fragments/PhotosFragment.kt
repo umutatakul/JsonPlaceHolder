@@ -9,7 +9,7 @@ import com.umutatakul.jsonplaceholder.ModelItems.PhotosModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterPhotos
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
-import kotlinx.android.synthetic.main.activity_photos.*
+import kotlinx.android.synthetic.main.fragment_photos.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
