@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.umutatakul.jsonplaceholder.R
+import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
 import kotlinx.android.synthetic.main.fragment_selection_screen.*
 
 
@@ -28,6 +29,9 @@ class SelectionScreenFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        textView.text = " ${SingletonClass.gonderilenUserName} 'ın Profili"
+
         postsButton.setOnClickListener {
             val action = SelectionScreenFragmentDirections.actionSelectionScreenFragmentToPostsFragment()
             Navigation.findNavController(it).navigate(action)

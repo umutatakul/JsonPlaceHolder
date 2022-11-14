@@ -3,14 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="170dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/text_frame">
 
     <TextView
         android:id="@+id/photosIdText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="233dp"
+        android:layout_height="43dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="2dp"
+        android:gravity="center"
         android:text="Photo Id Test"
         android:textAlignment="center"
         android:textColor="#212529"
@@ -27,6 +30,7 @@
         android:id="@+id/photosTitleText"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:gravity="center"
         android:text="Photo Title Test"
         android:textAlignment="center"
         android:textColor="#212529"
@@ -42,7 +46,8 @@
     <ImageView
         android:id="@+id/photosThumbnailImage"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="168dp"
+        android:layout_margin="10dp"
         android:layout_marginEnd="1dp"
         android:text="Completed Test"
         android:textAlignment="center"
@@ -52,6 +57,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/photosIdText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"></ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

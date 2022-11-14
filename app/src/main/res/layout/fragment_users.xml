@@ -8,6 +8,7 @@
     tools:context=".Fragments.UsersFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/userBackgroundColor4"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         android:id="@+id/recyclerViewUsers"

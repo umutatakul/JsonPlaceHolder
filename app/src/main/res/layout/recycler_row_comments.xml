@@ -3,9 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp">
+    android:layout_height="300dp"
+    android:background="@drawable/text_frame"
+    android:layout_margin="5dp">
 
     <TextView
+        android:layout_margin="10dp"
         android:textStyle="bold"
         android:id="@+id/commentsNameText"
         android:layout_width="0dp"
@@ -21,6 +24,7 @@
     </TextView>
 
     <TextView
+        android:layout_margin="10dp"
         android:textStyle="italic"
         android:id="@+id/commentsEmailText"
         android:layout_width="0dp"
@@ -37,6 +41,7 @@
     </TextView>
 
     <TextView
+        android:layout_margin="10dp"
         android:id="@+id/commentsBodyText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 
@@ -38,7 +39,34 @@ class RecyclerAdapterUsers (val context : Context, val usersList:List<UsersModel
         holder.nameVH.text=usersList[position].name
         holder.emailVH.text=usersList[position].email
 
-        holder.itemView.setOnClickListener {
+        if (position%3==1){
+            holder.itemView.constraintLayoutId.setBackgroundColor(ContextCompat.getColor(context,R.color.userBackgroundColor1))
+
+
+        }
+
+        else if (position%3==2) {
+            holder.itemView.constraintLayoutId.setBackgroundColor(
+                ContextCompat.getColor(
+                    context,
+                    R.color.userBackgroundColor2
+                )
+            )
+        }
+
+        else if (position%3==0) {
+            holder.itemView.constraintLayoutId.setBackgroundColor(
+                ContextCompat.getColor(
+                    context,
+                    R.color.userBackgroundColor3
+                )
+            )
+
+        }
+
+
+
+            holder.itemView.setOnClickListener {
             //val intent = Intent(holder.itemView.context, SelectionScreenActivity::class.java)
 
             val action = UsersFragmentDirections.actionUsersFragmentToSelectionScreenFragment()

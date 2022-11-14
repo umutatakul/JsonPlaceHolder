@@ -3,13 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="85dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/text_frame">
 
     <TextView
         android:id="@+id/albumTitleText"
         android:layout_width="297dp"
         android:layout_height="85dp"
+        android:gravity="center"
         android:text="Album Title Test"
+        android:textAlignment="center"
         android:textColor="#212529"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,12 +26,15 @@
         android:id="@+id/albumPostIdText"
         android:layout_width="115dp"
         android:layout_height="85dp"
+        android:gravity="center"
         android:text="Album Post Id Test"
+        android:textAlignment="center"
         android:textColor="#212529"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/albumTitleText"
+        app:layout_constraintBottom_toBottomOf="@+id/albumTitleText"
         app:layout_constraintEnd_toStartOf="@+id/albumTitleText"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/albumTitleText">
 
 
     </TextView>

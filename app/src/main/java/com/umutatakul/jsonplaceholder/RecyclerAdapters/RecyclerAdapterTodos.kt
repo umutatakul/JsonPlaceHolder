@@ -13,13 +13,13 @@ import kotlinx.android.synthetic.main.recycler_row_todos.view.*
 
 class RecyclerAdapterTodos (val context: Context,val todosList : List<TodosModelItem>):RecyclerView.Adapter<RecyclerAdapterTodos.TodosVH>(){
     class TodosVH(itemView: View) : RecyclerView.ViewHolder(itemView){
-        var userIdVH :TextView
+        //var userIdVH :TextView
         var titleVH : TextView
         //var complatedVH : TextView
         var complatedImageVH : ImageView
 
         init {
-            userIdVH = itemView.todosUserIdText
+            //userIdVH = itemView.todosUserIdText
             titleVH = itemView.photosTitleText
             //complatedVH = itemView.todosCompletedText
             complatedImageVH = itemView.photosThumbnailImage
@@ -33,7 +33,7 @@ class RecyclerAdapterTodos (val context: Context,val todosList : List<TodosModel
     }
 
     override fun onBindViewHolder(holder: TodosVH, position: Int) {
-        holder.userIdVH.text = todosList[position].userId.toString()
+        //holder.userIdVH.text = todosList[position].userId.toString()
         holder.titleVH.text = todosList[position].title
         //holder.complatedVH.text = todosList[position].completed.toString()
         if(todosList[position].completed){
