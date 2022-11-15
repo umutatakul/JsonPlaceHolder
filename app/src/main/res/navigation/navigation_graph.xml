@@ -11,7 +11,11 @@
         tools:layout="@layout/fragment_users" >
         <action
             android:id="@+id/action_usersFragment_to_selectionScreenFragment"
-            app:destination="@id/selectionScreenFragment" />
+            app:destination="@id/selectionScreenFragment"
+            app:enterAnim="@anim/enter_right_to_left"
+            app:exitAnim="@anim/exit_right_to_left"
+            app:popEnterAnim="@anim/enter_left_to_right"
+            app:popExitAnim="@anim/exit_left_to_right" />
     </fragment>
     <fragment
         android:id="@+id/todosFragment"
@@ -25,13 +29,25 @@
         tools:layout="@layout/fragment_selection_screen" >
         <action
             android:id="@+id/action_selectionScreenFragment_to_todosFragment"
-            app:destination="@id/todosFragment" />
+            app:destination="@id/todosFragment"
+            app:enterAnim="@anim/enter_right_to_left"
+            app:exitAnim="@anim/exit_right_to_left"
+            app:popEnterAnim="@anim/enter_left_to_right"
+            app:popExitAnim="@anim/exit_left_to_right" />
         <action
             android:id="@+id/action_selectionScreenFragment_to_postsFragment"
-            app:destination="@id/postsFragment" />
+            app:destination="@id/postsFragment"
+            app:enterAnim="@anim/enter_right_to_left"
+            app:exitAnim="@anim/exit_right_to_left"
+            app:popEnterAnim="@anim/enter_left_to_right"
+            app:popExitAnim="@anim/exit_left_to_right" />
         <action
             android:id="@+id/action_selectionScreenFragment_to_albumsFragment"
-            app:destination="@id/albumsFragment" />
+            app:destination="@id/albumsFragment"
+            app:enterAnim="@anim/enter_right_to_left"
+            app:exitAnim="@anim/exit_right_to_left"
+            app:popEnterAnim="@anim/enter_left_to_right"
+            app:popExitAnim="@anim/exit_left_to_right" />
     </fragment>
     <fragment
         android:id="@+id/postsFragment"
@@ -40,7 +56,11 @@
         tools:layout="@layout/fragment_posts" >
         <action
             android:id="@+id/action_postsFragment_to_commentsFragment"
-            app:destination="@id/commentsFragment" />
+            app:destination="@id/commentsFragment"
+            app:enterAnim="@anim/enter_right_to_left"
+            app:exitAnim="@anim/exit_right_to_left"
+            app:popEnterAnim="@anim/enter_left_to_right"
+            app:popExitAnim="@anim/exit_left_to_right" />
     </fragment>
     <fragment
         android:id="@+id/commentsFragment"
@@ -54,7 +74,11 @@
         tools:layout="@layout/fragment_albums" >
         <action
             android:id="@+id/action_albumsFragment_to_photosFragment"
-            app:destination="@id/photosFragment" />
+            app:destination="@id/photosFragment"
+            app:enterAnim="@anim/enter_right_to_left"
+            app:exitAnim="@anim/exit_right_to_left"
+            app:popEnterAnim="@anim/enter_left_to_right"
+            app:popExitAnim="@anim/exit_left_to_right" />
     </fragment>
     <fragment
         android:id="@+id/photosFragment"
@@ -63,7 +87,11 @@
         tools:layout="@layout/fragment_photos" >
         <action
             android:id="@+id/action_photosFragment_to_photosDetailFragment"
-            app:destination="@id/photosDetailFragment" />
+            app:destination="@id/photosDetailFragment"
+            app:enterAnim="@anim/enter_right_to_left"
+            app:exitAnim="@anim/exit_right_to_left"
+            app:popEnterAnim="@anim/enter_left_to_right"
+            app:popExitAnim="@anim/exit_left_to_right" />
     </fragment>
     <fragment
         android:id="@+id/photosDetailFragment"
