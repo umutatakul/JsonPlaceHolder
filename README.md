@@ -1,6 +1,6 @@
 # Json Place Holder
 
-![Emulator gif animasyonu](https://github.com/umutatakul/JsonPlaceHolder/gif/amimation.gif)
+![Emulator gif animasyonu](https://github.com/umutatakul/JsonPlaceHolder/blob/master/Animation.gif?raw=true)
 
 This project include Mock data of [Json Placeholder site](https://jsonplaceholder.typicode.com/).
 
