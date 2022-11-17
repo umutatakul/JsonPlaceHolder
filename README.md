@@ -10,4 +10,3 @@ This project include Mock data of [Json Placeholder site](https://jsonplaceholde
 * ### [Retrofit](https://square.github.io/retrofit/)
 * ### [Picasso](https://square.github.io/picasso/)
 * ### [Navigation](https://developer.android.com/jetpack/androidx/releases/navigation)
-
