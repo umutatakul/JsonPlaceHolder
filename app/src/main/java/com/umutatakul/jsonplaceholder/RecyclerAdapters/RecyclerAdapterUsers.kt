@@ -83,9 +83,6 @@ class RecyclerAdapterUsers (val context : Context, val usersList:List<UsersModel
             singletonId.gonderilenUserName= usersList[position].name
 
             //holder.itemView.context.startActivity(intent)
-
-
-
         }
 
     }

@@ -5,18 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.umutatakul.jsonplaceholder.API.ApiInterface
 import com.umutatakul.jsonplaceholder.ModelItems.TodosModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterTodos
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_todos.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.StringBuilder
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class TodosFragment : Fragment() {
     lateinit var recyclerAdapterTodos: RecyclerAdapterTodos
+
+    @Inject
+    lateinit var retrofitBuilder: ApiInterface
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +44,7 @@ class TodosFragment : Fragment() {
         getTodosData()
     }
     fun getTodosData(){
-        val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
+        //val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 
 
         //val denemeId = "5"

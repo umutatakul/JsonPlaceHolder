@@ -5,19 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.umutatakul.jsonplaceholder.API.ApiInterface
 import com.umutatakul.jsonplaceholder.ModelItems.AlbumsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterAlbums
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
+import dagger.hilt.android.AndroidEntryPoint
 
 import kotlinx.android.synthetic.main.fragment_albums.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class AlbumsFragment : Fragment() {
     lateinit var  recyclerAdapterAlbums: RecyclerAdapterAlbums
+    @Inject
+    lateinit var retrofitBuilder:ApiInterface
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +49,7 @@ class AlbumsFragment : Fragment() {
 
 
 
-        val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
+        //val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 
 
         val retrofitData = retrofitBuilder.getAlbumsDataFromWS(albumsUserId) //.getWhichDataFromWS(give the path of user ID or etc.)

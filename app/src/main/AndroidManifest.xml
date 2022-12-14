@@ -5,33 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".JsonPlaceHolderApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JsonPlaceHolder">
-        <activity
-            android:name=".Activities.CommentsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.PostsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.PhotosDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.PhotosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.AlbumActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.SelectionScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Activities.TodosActivity"
-            android:exported="false" />
+
         <activity
             android:name=".Activities.MainActivity"
             android:exported="true">

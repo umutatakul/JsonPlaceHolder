@@ -5,19 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.umutatakul.jsonplaceholder.API.ApiInterface
 import com.umutatakul.jsonplaceholder.ModelItems.PhotosModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterPhotos
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_photos.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class PhotosFragment : Fragment() {
     lateinit var recyclerAdapterPhotos: RecyclerAdapterPhotos
-
+    @Inject
+    lateinit var retrofitBuilder:ApiInterface
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +44,7 @@ class PhotosFragment : Fragment() {
         getPhotosData()
     }
     fun getPhotosData(){
-        val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
+        //val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 
         val retrofitData = retrofitBuilder.getPhotosDataFromWS(SingletonClass.gonderilenAlbumId.toString())
 

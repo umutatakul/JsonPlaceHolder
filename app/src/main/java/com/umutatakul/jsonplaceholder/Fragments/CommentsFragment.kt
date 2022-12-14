@@ -5,18 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.umutatakul.jsonplaceholder.API.ApiInterface
 import com.umutatakul.jsonplaceholder.ModelItems.CommentsModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterComments
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_comments.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.lang.StringBuilder
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class CommentsFragment : Fragment() {
     lateinit var recyclerAdapterComments: RecyclerAdapterComments
+
+    @Inject
+    lateinit var retrofitBuilder: ApiInterface
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +41,11 @@ class CommentsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recyclerViewComments.setHasFixedSize(true)
+
         getCommentsData ()
     }
     fun getCommentsData(){
-        val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
+        //val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 
         val retrofitData = retrofitBuilder.getCommentsDataFromWS(SingletonClass.gonderilenPostsId.toString())
 

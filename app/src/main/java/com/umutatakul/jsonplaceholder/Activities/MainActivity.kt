@@ -9,6 +9,7 @@ import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.RecyclerAdapters.RecyclerAdapterUsers
 import com.umutatakul.jsonplaceholder.ModelItems.UsersModelItem
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 //val baseUrl = "https://jsonplaceholder.typicode.com"
 
 
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     //lateinit var  recyclerAdapterUsers: RecyclerAdapterUsers
