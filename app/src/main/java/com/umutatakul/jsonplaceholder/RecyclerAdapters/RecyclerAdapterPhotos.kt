@@ -12,10 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
 import com.umutatakul.jsonplaceholder.Fragments.PhotosFragmentDirections
+import com.umutatakul.jsonplaceholder.ImageLoaderClass
 import com.umutatakul.jsonplaceholder.ModelItems.PhotosModelItem
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
 import kotlinx.android.synthetic.main.recycler_row_photos.view.*
+
 
 class RecyclerAdapterPhotos(var context:Context, val photoList:List<PhotosModelItem>):RecyclerView.Adapter<RecyclerAdapterPhotos.PhotosVH>() {
     class PhotosVH (itemView: View):RecyclerView.ViewHolder(itemView){
@@ -39,14 +41,15 @@ class RecyclerAdapterPhotos(var context:Context, val photoList:List<PhotosModelI
     override fun onBindViewHolder(holder: PhotosVH, position: Int) {
         holder.photosIdVH.text = photoList[position].id.toString()
         holder.photosTitleVH.text = photoList[position].title
-        Picasso.get().load(photoList[position].thumbnailUrl).into(holder.photosThumbnailVH)
-
+        //Picasso.get().load(photoList[position].thumbnailUrl).into(holder.photosThumbnailVH)
+        var imageLoaderInstance = ImageLoaderClass()
+        imageLoaderInstance.imageLoader(photoList[position].thumbnailUrl,holder.photosThumbnailVH)
 
         holder.itemView.photosThumbnailImage.setOnClickListener {
             //val intent = Intent (holder.itemView.context, PhotosDetailActivity::class.java)
             val action = PhotosFragmentDirections.actionPhotosFragmentToPhotosDetailFragment()
             Navigation.findNavController(it).navigate(action)
-            val singletonId = SingletonClass.SecilenIdBilgiler
+            val singletonId = SingletonClass
 
             singletonId.gonderilenPhotoUrl = photoList.get(position).url
 
