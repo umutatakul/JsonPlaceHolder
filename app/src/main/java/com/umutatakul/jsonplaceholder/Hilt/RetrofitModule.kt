@@ -22,7 +22,6 @@ object RetrofitModule {
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(Constants.baseUrl)
             .build()
-
     }
 
     @Provides
@@ -30,5 +29,6 @@ object RetrofitModule {
     fun ProvideService(retrofit: Retrofit):ApiInterface{
         return retrofit.create(ApiInterface::class.java)
     }
+
 
 }

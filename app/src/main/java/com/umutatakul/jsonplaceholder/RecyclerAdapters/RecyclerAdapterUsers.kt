@@ -79,6 +79,9 @@ class RecyclerAdapterUsers (val context : Context, val usersList:List<UsersModel
 
             //singletonId.gonderilenId = userList.get(position).id
 
+
+
+
             singletonId.gonderilenUsersId = usersList[position].id
             singletonId.gonderilenUserName= usersList[position].name
 

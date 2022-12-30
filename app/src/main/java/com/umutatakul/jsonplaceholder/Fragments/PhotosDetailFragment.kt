@@ -7,12 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import com.umutatakul.jsonplaceholder.ImageLoaderClass
+import com.umutatakul.jsonplaceholder.ImageLoaderHiltClass
 import com.umutatakul.jsonplaceholder.R
 import com.umutatakul.jsonplaceholder.SingletonClasses.SingletonClass
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_photos_detail.*
+import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class PhotosDetailFragment : Fragment() {
+
+    @Inject
+    lateinit var imageLoader: ImageLoaderHiltClass
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,10 +38,13 @@ class PhotosDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         //Picasso.get().load(SingletonClass.gonderilenPhotoUrl).into(photosDetailImageId)
-        var imageLoader = ImageLoaderClass()
+        //var imageLoader = ImageLoaderClass()
         SingletonClass.gonderilenPhotoUrl?.let {
             imageLoader.imageLoader(it,photosDetailImageId)
         }
+
+
+        //imageLoader.imageLoader(SingletonClass.gonderilenPhotoUrl!!,photosDetailImageId)
 
     }
 

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import com.squareup.picasso.Picasso
 import com.umutatakul.jsonplaceholder.API.ApiInterface
 import com.umutatakul.jsonplaceholder.ModelItems.PhotosModelItem
 import com.umutatakul.jsonplaceholder.R
@@ -23,11 +25,12 @@ class PhotosFragment : Fragment() {
     @Inject
     lateinit var retrofitBuilder:ApiInterface
 
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
     }
 
     override fun onCreateView(
@@ -42,7 +45,13 @@ class PhotosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         recyclerViewPhotos.setHasFixedSize(true)
         getPhotosData()
+
+
+
+
+
     }
+
     fun getPhotosData(){
         //val retrofitBuilder = SingletonClass.retrofitBuilderTemplate
 

@@ -3,7 +3,7 @@ package com.umutatakul.jsonplaceholder
 import android.widget.ImageView
 import com.squareup.picasso.Picasso
 
-class ImageLoaderClass {
+open class ImageLoaderClass {
 
     //Picasso.get().load(photoList[position].thumbnailUrl).into(holder.photosThumbnailVH)
     //Photo Url : String , holder.photosThumbnail:ImageView
@@ -12,4 +12,6 @@ class ImageLoaderClass {
             .load(photoUri)
             .into(photoVH)
     }
+
+
 }
